@@ -1,0 +1,81 @@
+<!-- Registration Model -->
+<div mdbModal #RegisterModal="mdbModal" class="modal fade left" tabindex="-1" role="dialog"
+   aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable scrollbar-secondary" role="document">
+  <div class="modal-content">
+    <div class="modal-header text-center">
+      <h4 class="modal-title w-100 font-weight-bold">Register</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="RegisterModal.hide()" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body mx-3 register">
+      <div class="md-form mb-5">
+        <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+        <input type="text" id="orangeForm-name" class="form-control" >
+        <label for="orangeForm-name">Fullname</label>
+      </div>
+      <div class="md-form mb-5">
+        <mdb-icon fas icon="phone" class="prefix grey-text"></mdb-icon>
+        <input type="tel" id="orangeForm-mobile" class="form-control">
+        <label for="orangeForm-Mobile">Mobile Number</label>
+      </div>
+
+      <div class="md-form mb-5">
+          <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+          <input type="email" id="orangeForm-email" class="form-control">
+          <label for="orangeForm-email">Email Address</label>
+        </div>
+
+      <div class="md-form mb-4">
+        <mdb-icon fas icon="id-card" class="prefix grey-text"></mdb-icon>
+        <input type="text" id="orangeForm-pass" class="form-control">
+        <label for="orangeForm-pass">Id/Passport</label>
+      </div>
+      <div class="md-form mb-4">
+          <mdb-icon fas icon="id-card" class="prefix grey-text"></mdb-icon>
+          <input type="password" id="orangeForm-password" class="form-control">
+          <label for="orangeForm-pass">Password</label>
+        </div>
+    
+      <div class="md-form mb-4">
+        <select class="browser-default custom-select">
+            <option selected>Ethnicity</option>
+            <option value="1">African</option>
+            <option value="2">White</option>
+            <option value="3">Coloured</option>
+            <option value="3">Indian</option>
+            <option value="3">Asian</option>
+            <option value="3">Other</option>
+          </select>
+      </div>
+
+      <div class="md-form mb-4">
+          <select class="browser-default custom-select">
+              <option selected>Highest Qualification</option>
+              <option value="1">Matric</option>
+              <option value="2">Diploma</option>
+              <option value="3">B-Tech</option>
+              <option value="2">Bachelors</option>
+              <option value="3">Honours</option>
+            </select>
+        </div>
+
+        <div class="md-form mb-4">
+            <select class="browser-default custom-select">
+                <option selected>Gender</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+          </div>
+
+    </div>
+    <div class="modal-footer d-flex justify-content-center" >
+      <button mdbBtn  class="waves-light register-button" mdbWavesEffect (click)="RegisterBtn('/interns')">Register
+        <mdb-icon far icon="paper-plane" class="ml-1"></mdb-icon>
+      </button>
+   
+    </div>
+  </div>
+</div>
+</div>
