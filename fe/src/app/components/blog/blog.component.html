@@ -1,1 +1,49 @@
-<p>blog works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="firmalar">    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!-- <div class="firma-card row">
+                    <div class="col-md-5 img-padding-no">
+                        <div class="firma-resim">
+                            <a href="#">
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                      
+                    </div>
+                </div> -->
+                <div class="firma-card row " *ngFor="let i of [1,1,1]" >
+                    <div class="col-md-5 img-padding-no">
+                        <div class="firma-resim">
+                            <a href="#">
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="firma-aciklama card-body">
+                                <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
+                                        </p>
+                           
+                            <button  mdbBtn type="button" color="primary" mdbWavesEffect><mdb-icon fas icon="thumbs-up"></mdb-icon></button>
+                            <button  mdbBtn type="button" color="primary" mdbWavesEffect><mdb-icon fas icon="thumbs-down"></mdb-icon></button>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    </div>
