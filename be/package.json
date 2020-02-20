@@ -6,8 +6,10 @@
   "scripts": {
     "test": "jest --detectOpenHandles --forceExit",
     "start": "nodemon",
-    "dev": "nodemon server.js",
-    "prod": "node server.js"
+    "prod": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ../fe",
+    "all": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
