@@ -27,7 +27,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthRegisterComponent } from './components/auth-register/auth-register.component';
-
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -59,7 +59,8 @@ import { AuthRegisterComponent } from './components/auth-register/auth-register.
     MDBBootstrapModule.forRoot(),
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
