@@ -1,0 +1,146 @@
+### test the root api url
+GET http://localhost:5000/
+
+
+
+#################### USER AUTHENTICATION
+### register new user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+	"email": "kidibhone1@gmail.com",
+	"password": "123456",
+	"name": "kidibhone"
+}
+
+
+### login
+POST http://localhost:5000/auth
+Content-Type: application/json
+
+{
+	"email": "kidibhone@gmail.com",
+	"password": "123456"
+}
+###--------------------end authentication
+
+
+
+#################### USER PROFILE
+### create profile
+POST http://localhost:5000/profiles
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1MWMxNzg2NjcyNTBiOTBhMDFkIn0sImlhdCI6MTU4MjAxNTg5NiwiZXhwIjoxNTgyMzc1ODk2fQ.LgYB7Bmyea4sLgVIhGbCDu9BBVXU3pKFVkeNBQzqQiQ
+
+{
+    "status": "Dev",
+    "skills": "Php, java, C++"
+}
+
+
+### get all users profiles
+GET http://localhost:5000/profiles
+
+
+### add working experience
+PUT http://localhost:5000/profiles/experience
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YjkxN2Y3NDhmNzExYTE5NjI5YTA5In0sImlhdCI6MTU4MjAxMjQyMywiZXhwIjoxNTgyMzcyNDIzfQ.IBmNRINRWUzHBxThX-OC_ak71G5h1RzPsHZ2KOoub5g
+
+{
+    "title": "senior dev",
+	"company": "Microsoft 2",
+	"from": "11-10-2018",
+	"current": true
+}
+
+
+### delete work experience per ID
+DELETE http://localhost:5000/profiles/experience/5e4b9bcbcd841e1ff83af380
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YjkxN2Y3NDhmNzExYTE5NjI5YTA5In0sImlhdCI6MTU4MjAxMjQyMywiZXhwIjoxNTgyMzcyNDIzfQ.IBmNRINRWUzHBxThX-OC_ak71G5h1RzPsHZ2KOoub5g
+
+
+### add education
+PUT http://localhost:5000/profiles/education
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1MWMxNzg2NjcyNTBiOTBhMDFkIn0sImlhdCI6MTU4MjAxNTg5NiwiZXhwIjoxNTgyMzc1ODk2fQ.LgYB7Bmyea4sLgVIhGbCDu9BBVXU3pKFVkeNBQzqQiQ
+
+{
+    "school": "Tut2",
+	"degree": "Diploma",
+	"fieldofstudy": "Information Technology",
+	"from": "2015-03-25",
+	"description": "Something description"
+}
+
+
+### delete education by id
+DELETE http://localhost:5000/profiles/education/5e4ba41ccd841e1ff83af385
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1MWMxNzg2NjcyNTBiOTBhMDFkIn0sImlhdCI6MTU4MjAxNTg5NiwiZXhwIjoxNTgyMzc1ODk2fQ.LgYB7Bmyea4sLgVIhGbCDu9BBVXU3pKFVkeNBQzqQiQ
+
+
+###-----------------end profile
+
+
+
+#################### GET SINGLE USER SECTION
+### get user per generated token
+GET http://localhost:5000/auth
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1MWMxNzg2NjcyNTBiOTBhMDFkIn0sImlhdCI6MTU4MjAxNTg5NiwiZXhwIjoxNTgyMzc1ODk2fQ.LgYB7Bmyea4sLgVIhGbCDu9BBVXU3pKFVkeNBQzqQiQ
+
+
+### get user per ID
+GET http://localhost:5000/profiles/user/5e4b8e24748f711a19629a08
+
+###-------------------end single user section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
