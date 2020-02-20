@@ -5,37 +5,44 @@
   <div class="modal-content">
     <div class="modal-header text-center">
       <h4 class="modal-title w-100 font-weight-bold">Register</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="RegisterModal.hide()" >
+      <mdb-icon far icon="times-circle"  type="mdb-icon" class="close" data-dismiss="modal" aria-label="Close" (click)="RegisterModal.hide()">
         <span aria-hidden="true">&times;</span>
-      </button>
+     </mdb-icon>
     </div>
     <div class="modal-body mx-3 register">
-      <div class="md-form mb-5">
-        <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-        <input type="text" id="orangeForm-name" class="form-control" >
-        <label for="orangeForm-name">Fullname</label>
-      </div>
-      <div class="md-form mb-5">
-        <mdb-icon fas icon="phone" class="prefix grey-text"></mdb-icon>
-        <input type="tel" id="orangeForm-mobile" class="form-control">
-        <label for="orangeForm-Mobile">Mobile Number</label>
+      <div class="md-form">
+        <mdb-icon fas icon="user" class="prefix"></mdb-icon>
+        <input mdbInput type="text" id="form1" class="form-control" >
+        <label for="form1">Fullname</label>
       </div>
 
-      <div class="md-form mb-5">
-          <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-          <input type="email" id="orangeForm-email" class="form-control">
-          <label for="orangeForm-email">Email Address</label>
+
+      <!-- <div class="md-form">
+        <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+        <input mdbInput type="text" id="form2" class="form-control">
+        <label for="form2">Example label</label>
+      </div> -->
+      <div class="md-form">
+        <mdb-icon fas icon="phone" class="prefix"></mdb-icon>
+        <input mdbInput type="text" id="form2" class="form-control">
+        <label for="form2">Mobile Number</label>
+      </div>
+
+      <div class="md-form">
+          <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+          <input mdbInput type="text" id="form3" class="form-control">
+          <label for="form3">Email Address</label>
         </div>
 
-      <div class="md-form mb-4">
-        <mdb-icon fas icon="id-card" class="prefix grey-text"></mdb-icon>
-        <input type="text" id="orangeForm-pass" class="form-control">
-        <label for="orangeForm-pass">Id/Passport</label>
+      <div class="md-form">
+        <mdb-icon fas icon="id-card" class="prefix"></mdb-icon>
+        <input mdbInput type="text" id="form4" class="form-control">
+        <label for="form4">Id/Passport</label>
       </div>
-      <div class="md-form mb-4">
-          <mdb-icon fas icon="id-card" class="prefix grey-text"></mdb-icon>
-          <input type="password" id="orangeForm-password" class="form-control">
-          <label for="orangeForm-pass">Password</label>
+      <div class="md-form">
+          <mdb-icon fas icon="id-card" class="prefix"></mdb-icon>
+          <input mdbInput type="password" id="form5" class="form-control">
+          <label for="form5">Password</label>
         </div>
     
       <div class="md-form mb-4">
