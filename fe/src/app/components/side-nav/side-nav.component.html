@@ -8,11 +8,24 @@
       <li>
         <a routerLink="/interns"><i class="fa fa-home"></i>Interns</a>
       </li>
+      <div *ngIf="isLoggedIn$ | async as isLoggedIn">
+        {{isLoggedIn}}
+        <li>
+          <a (click)="LoginAuth()"><i class="fa fa-sign-in-alt"></i>Login</a>
+        </li>
+        <li *ngIf="isLoggedIn == false">
+          <a (click)='RegisterAuth()'><i class="fa fa-user-plus"></i>Register</a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a (click)='RegisterAuth()'><i class="fa fa-user-plus"></i>Logout</a>
+        </li>
+      </div>
+
       <li>
-        <a (click)="LoginAuth()"><i class="fa fa-sign-in-alt"></i>Login</a>
+        <a (click)="LoginAuth()"><i class="fa fa-sign-in-alt"></i>1Login</a>
       </li>
-      <li>
-        <a (click)='RegisterAuth()'><i class="fa fa-user-plus"></i>Register</a>
+      <li >
+        <a (click)='RegisterAuth()'><i class="fa fa-user-plus"></i>1Register</a>
       </li>
     </ul>
   </aside>
@@ -27,12 +40,12 @@
         <!-- Filtering tabs for interns -->
         <nav class="nav nav-pills flex-column flex-sm-row">
           <div class="nav link1">
-            <a class="flex-sm-fill text-sm-center nav-link" routerLink="/all-interns">All Interns</a>
+            <a class="flex-sm-fill text-sm-center nav-link" routerLink="/interns/all">All Interns</a>
           </div>
-          
-          <a class="flex-sm-fill text-sm-center nav-link" routerLink="/top-ten-interns">Top Ten</a>
+
+          <a class="flex-sm-fill text-sm-center nav-link" routerLink="/interns/top-ten">Top Ten</a>
         </nav>
-        
+
       </div>
     </nav>
 

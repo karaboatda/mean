@@ -9,7 +9,7 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-	"email": "kidibhone1@gmail.com",
+	"email": "karabo@gmail.com",
 	"password": "123456",
 	"name": "kidibhone"
 }
@@ -20,7 +20,7 @@ POST http://localhost:5000/auth
 Content-Type: application/json
 
 {
-	"email": "kidibhone@gmail.com",
+	"email": "kidibhone1@gmail.com",
 	"password": "123456"
 }
 ###--------------------end authentication
@@ -31,11 +31,11 @@ Content-Type: application/json
 ### create profile
 POST http://localhost:5000/profiles
 Content-Type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1MWMxNzg2NjcyNTBiOTBhMDFkIn0sImlhdCI6MTU4MjAxNTg5NiwiZXhwIjoxNTgyMzc1ODk2fQ.LgYB7Bmyea4sLgVIhGbCDu9BBVXU3pKFVkeNBQzqQiQ
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNTgyMjUxMTI3LCJleHAiOjE1ODI2MTExMjd9.E_TQ3SrXhfVWIRKwUKHiN1pE2FZvBuUYN0K4Muo5O5U
 
 {
     "status": "Dev",
-    "skills": "Php, java, C++"
+    "skills": "Php, java, C--"
 }
 
 
@@ -46,20 +46,20 @@ GET http://localhost:5000/profiles
 ### add working experience
 PUT http://localhost:5000/profiles/experience
 Content-Type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YjkxN2Y3NDhmNzExYTE5NjI5YTA5In0sImlhdCI6MTU4MjAxMjQyMywiZXhwIjoxNTgyMzcyNDIzfQ.IBmNRINRWUzHBxThX-OC_ak71G5h1RzPsHZ2KOoub5g
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNTgyMjUxMTI3LCJleHAiOjE1ODI2MTExMjd9.E_TQ3SrXhfVWIRKwUKHiN1pE2FZvBuUYN0K4Muo5O5U
 
 {
-    "title": "senior dev",
+    "title": "Other dev",
 	"company": "Microsoft 2",
 	"from": "11-10-2018",
-	"current": true
+	"current": false
 }
 
 
 ### delete work experience per ID
 DELETE http://localhost:5000/profiles/experience/5e4b9bcbcd841e1ff83af380
 Content-Type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YjkxN2Y3NDhmNzExYTE5NjI5YTA5In0sImlhdCI6MTU4MjAxMjQyMywiZXhwIjoxNTgyMzcyNDIzfQ.IBmNRINRWUzHBxThX-OC_ak71G5h1RzPsHZ2KOoub5g
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNTgyMjUxMTI3LCJleHAiOjE1ODI2MTExMjd9.E_TQ3SrXhfVWIRKwUKHiN1pE2FZvBuUYN0K4Muo5O5U
 
 
 ### add education
@@ -90,11 +90,11 @@ x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1M
 ### get user per generated token
 GET http://localhost:5000/auth
 Content-Type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU0YmE1MWMxNzg2NjcyNTBiOTBhMDFkIn0sImlhdCI6MTU4MjAxNTg5NiwiZXhwIjoxNTgyMzc1ODk2fQ.LgYB7Bmyea4sLgVIhGbCDu9BBVXU3pKFVkeNBQzqQiQ
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNTgyMjUxMTI3LCJleHAiOjE1ODI2MTExMjd9.E_TQ3SrXhfVWIRKwUKHiN1pE2FZvBuUYN0K4Muo5O5U
 
 
 ### get user per ID
-GET http://localhost:5000/profiles/user/5e4b8e24748f711a19629a08
+GET http://localhost:5000/profiles/user/5e4f3c0b43fed143790b20c0
 
 ###-------------------end single user section
 
