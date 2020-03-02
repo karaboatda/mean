@@ -1,24 +1,24 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InternsComponent } from './components/interns/interns.component';
-import { AuthenticationComponent } from './components/authentication/authentication.component';
-import { AllInternsComponent } from './components/interns/all-interns/all-interns.component';
-import { TopTenComponent } from './components/interns/top-ten/top-ten.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { CommunityComponent } from './components/community/community.component';
 import { ProfileComponent } from './components/profile/profile.component';
-// import { AuthGuard } from './services/authguard';
+import { UProfileComponent } from './components/u-profile/u-profile.component';
 
+// this constant default routes to Home, and also send all unknown path to Home
 const routes: Routes = [
-	{ path: ' ', component: InternsComponent, redirectTo: '' },
-	{ path: 'interns', component: InternsComponent },
-	{ path: 'interns/all', component: AllInternsComponent },
-	{ path: 'interns/top-ten', component: TopTenComponent },
-	{ path: 'admin/dashboard', component: DashboardComponent },
-	{ path: 'profile', component: ProfileComponent /* , canActivate: [AuthGuard] */ }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'community', component: CommunityComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'user', component: UProfileComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
-	imports: [ RouterModule.forRoot(routes, { enableTracing: false }) ],
-	exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
